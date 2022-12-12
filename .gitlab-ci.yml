@@ -1,0 +1,8 @@
+include:
+- project: gardenlinux/gardenlinux-package-build
+  file: pipeline/pipeline-git.yml
+
+variables:
+  SOURCE_NAME: oras
+  SOURCE_REPO: https://github.com/oras-project/oras.git
+  SOURCE_APT_INSTALL: golang-go

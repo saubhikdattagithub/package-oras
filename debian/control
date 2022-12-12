@@ -1,0 +1,18 @@
+Source: oras
+Section: misc
+Priority: optional
+Maintainer: Garden Linux <contact@gardenlinux.io>
+Build-Depends:
+ debhelper-compat (= 13),
+ git,
+ golang-go:native,
+Standards-Version: 4.6.0
+Rules-Requires-Root: no
+
+Package: oras
+Architecture: any
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: The ORAS project provides a way to push
+  and pull OCI Artifacts to and from OCI Registries
