@@ -5,7 +5,7 @@ Maintainer: Garden Linux <contact@gardenlinux.io>
 Build-Depends:
  debhelper-compat (= 13),
  git,
- golang-go:native,
+ golang-any,
 Standards-Version: 4.6.0
 Rules-Requires-Root: no
 
