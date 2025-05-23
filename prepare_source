@@ -1,5 +1,5 @@
 pkg=oras
-version_orig=1.2.0
+version_orig=1.2.3
 version="$version_orig-0"
 git_src --branch "v$version_orig" https://github.com/oras-project/oras.git
 import_src src
