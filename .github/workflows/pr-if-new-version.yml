@@ -16,13 +16,13 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.13'
+      - name: Install devscripts
+        run: apt install -y devscripts
       - run: |
           OUTPUT=$(python3 update_version.py)
           echo $OUTPUT
           echo "has-update=$OUTPUT" >> "$GITHUB_OUTPUT"
         id: update
-      - name: Install devscripts
-        run: apt install -y devscripts
       - name: create pull request
         run: |
           if [[ '${{ steps.update.outputs.has-update }}' ]]; then
