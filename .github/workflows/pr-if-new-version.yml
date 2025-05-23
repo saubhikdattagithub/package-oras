@@ -7,9 +7,6 @@ jobs:
   update:
     runs-on: ubuntu-latest
     # Matrix build for maintenance of multiple kernels
-    strategy:
-      matrix:
-        branch: ['main', 'maint-6.6']
     permissions:
       pull-requests: write
       contents: write
@@ -27,7 +24,7 @@ jobs:
       - name: create pull request
         run: |
           if [[ '${{ steps.update.outputs.has-update }}' ]]; then
-            BRANCH_NAME="oras-${{ matrix.branch }}"
+            BRANCH_NAME="oras-update"
             git checkout -b "$BRANCH_NAME"
             git add prepare_source
             git config --global user.name "Garden Linux Builder"
