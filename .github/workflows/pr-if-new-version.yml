@@ -17,7 +17,7 @@ jobs:
         with:
           python-version: '3.13'
       - name: Install devscripts
-        run: apt install -y devscripts
+        run: sudo apt install -y devscripts
       - run: |
           OUTPUT=$(python3 update_version.py)
           echo $OUTPUT
