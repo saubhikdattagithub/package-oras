@@ -21,6 +21,8 @@ jobs:
           echo $OUTPUT
           echo "has-update=$OUTPUT" >> "$GITHUB_OUTPUT"
         id: update
+      - name: Install devscripts
+        run: apt install -y devscripts
       - name: create pull request
         run: |
           if [[ '${{ steps.update.outputs.has-update }}' ]]; then
